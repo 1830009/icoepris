@@ -1,0 +1,117 @@
+body{
+    background-color:  rgb(235, 235, 235);
+    width: 100%;
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.titulo_usuarios{
+    background-color: rgb(0, 100, 167);
+    padding: 10px;
+    color: #FFFFFF;
+    font-size: 30px;
+    margin: 20px 400px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+.contenido_formulario{
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    margin: 20px 150px;
+    padding: 20px;
+    text-align: center;
+}
+
+table{
+    width: 100%;
+    border: transparent 10px solid;
+}
+td{
+    width: 100%;
+    border: transparent 15px solid; 
+}
+
+th{
+    width: 30%;
+    background-color: rgb(0, 100, 167);
+    color: white;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+   
+}
+
+
+input:hover{
+    border: 2px solid #93BDED;
+} 
+
+input {
+    text-align: center;
+    border: 2px solid #000000;
+	font-size: 12px;
+	height: 40px;
+	width: 85%;
+	transition: .3s ease all;
+	border-radius: 5px;
+    
+}
+
+.guardar{
+    background-color: #00bb2d;
+    font-size: 15px;
+    border-radius: 5px;
+    padding: 5px;
+    color: #FFFFFF;
+    border-color: transparent;
+    width: 30%;
+    margin: 10px 350px;
+}   
+
+.guardar:hover{
+    background-color: #62f257; 
+    cursor: pointer;
+}
+
+.vista{
+    background-color: rgb(0, 100, 167);
+    font-size: 15px;
+    border-radius: 5px;
+    padding: 10px;
+    color: #FFFFFF;
+    border-color: transparent;
+    width: 30%;
+    margin: 10px 350px;
+}   
+
+.vista:hover{
+    background-color: #93BDED; 
+    cursor: pointer;
+}
+
+strong{
+    font-size:26px;
+}
+
+.img_logo{
+    padding-top: 20px;
+    padding-bottom: 10px;
+    width: 30%;
+
+}
+
+.input_img{
+    width: 240px;
+    height: 40px;
+    border-color: transparent;
+}
+
+.input_colores{
+    width: 150px;
+    height: 150px;
+    border-color: transparent;
+    background-color: transparent;
+}

@@ -1,0 +1,254 @@
+body{
+    background-color:  rgb(235, 235, 235);
+    width: 100%;
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+.tabla_usuarios{
+    background-color: transparent;
+    width: 100%;
+}
+
+.tabla_federal{
+    background-color: transparent;
+    width: 100%;
+}
+
+td{
+    border:solid 10px transparent;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+}
+
+th{
+    background-color: rgb(0, 100, 167);
+    color: #FFFFFF;
+    padding: .8%;
+}
+
+.eliminar{
+    background-color: red;
+    font-size: 80%;
+    border-radius: 5px;
+    padding: 1%;
+    color: #FFFFFF;
+    border-color: transparent;
+}
+
+.editar{
+    background-color: #ffff00;
+    font-size: 80%;
+    border-radius: 5px;
+    padding: 1%;
+    border-color: transparent;
+}
+
+a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.titulo_usuarios{
+    background-color: rgb(0, 100, 167);
+    padding: 1%;
+    color: #FFFFFF;
+    font-size: 180%;
+    margin: 2% 28%;
+    text-align: center;
+    text-transform: uppercase;
+    width: 40%;
+}
+
+.Agregar_usuarios{
+    background-color: #00bb2d;
+    font-size: 90%;
+    border-radius: 5px;
+    padding: 1%;
+    color: #FFFFFF;
+    border-color: transparent;
+    margin-left: 1%;
+    margin-bottom: 1%;
+}
+
+.a_usuarios{
+    color: #FFFFFF;
+}
+
+.Agregar_usuarios:hover{
+    background-color: #62f257;
+}
+
+.editar:hover{
+    background-color: #ffff9e;
+}
+
+.eliminar:hover{
+    background-color: #ff7b5a;
+}
+
+/*------Agregar usuarios-----*/
+
+.titulo_usuario{
+    font-size: 100%;
+}
+
+.contenido_formulario{
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    margin: 20px 150px;
+    padding: 20px;
+}
+
+
+.flex{
+    display: flex;
+    text-align: center;
+}
+
+.sel1{
+    text-align: center;
+    margin: auto;
+}
+
+.sel1 select{
+    text-align: center;
+    font-weight: bold;
+}
+.contenido1{
+    width: 50%;
+}
+
+.contenido2{
+    width: 50%;
+}
+
+.select_usuario{
+    text-align: center;
+}
+
+input:hover{
+    border: 2px solid #93BDED;
+} 
+
+select:hover{
+    border: 2px solid #93BDED;
+} 
+
+  input {
+    border: 2px solid #000000;
+	font-size: 14 px;
+	height: 40px;
+	width: 90%;
+	padding: 5px 12px;
+	transition: .3s ease all;
+	border-radius: 5px;
+    
+}
+
+select{
+    border: 2px solid #000000;
+	font-size: 14 px;
+	height: 50px;
+	width: 90%;
+	padding: 5px 12px;
+	transition: .3s ease all;
+	border-radius: 5px;
+}
+
+.select_usuarios{
+    border: 2px solid #000000;
+	font-size: 14 px;
+	height: 50px;
+	width: 50%;
+	padding: 5px 12px;
+	transition: .3s ease all;
+	border-radius: 5px;
+}
+
+.contenido_usuario{
+    display: flex;
+}
+
+.agregar_usuario{
+    background-color: #00bb2d;
+    font-size: 80%;
+    border-radius: 5px;
+    padding: 1%;
+    color: #FFFFFF;
+    border-color: transparent;
+    width: 20%;
+    margin: 1% 40%;
+}   
+
+.agregar_usuario:hover{
+    background-color: #62f257; 
+    cursor: pointer;
+}
+
+.cancelar_usuario{
+    background-color: red;
+    font-size: 80%;
+    border-radius: 5px;
+    padding: 1%;
+    color: #FFFFFF;
+    border-color: transparent;  
+    width: 20%;
+    margin: 1% 40%;
+
+}
+
+.reporte{
+    background-color: rgb(252, 252, 120);
+    font-size: 80%;
+    border-radius: 5px;
+    padding: 1%;
+    color: black;
+    border-color: transparent;  
+    width: 20%;
+    margin: 1% 40%;
+    
+}
+
+.reporte a {
+    color: black;
+}
+.cancelar_usuario:hover{
+    background-color: #ff7b5a;
+    cursor: pointer;
+}
+
+/* Admin federal */
+
+.contenido_federal{
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    margin: 20px 150px;
+    padding: 20px;
+}
+
+.agregar_prodcuto{
+    background-color: #00bb2d;
+    font-size: 15px;
+    border-radius: 5px;
+    padding: 5px;
+    color: #FFFFFF;
+    border-color: transparent;
+    width: 30%;
+    margin: 10px 340px;
+}
+
+.agregar_prodcuto:hover{
+    background-color: #62f257; 
+    cursor: pointer;
+}
+
+
+.text_area{
+    border: 2px solid #000000;
+	font-size: 14 px;
+	height: 70px;
+	width: 100%;
+	transition: .3s ease all;
+	border-radius: 5px;
+}

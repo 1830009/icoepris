@@ -1,0 +1,100 @@
+body{
+    background-color:  rgb(235, 235, 235);
+    width: 100%;
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+.titulo{
+    background-color: rgb(0, 100, 167);
+    padding: 1%;
+    color: #FFFFFF;
+    font-size: 180%;
+    margin: 2% 42%;
+    text-align: center;
+    text-transform: uppercase;
+    width: 40%;
+}
+
+.sub{
+    background-color: rgb(0, 100, 167);
+    padding: 5%;
+    color: #FFFFFF;
+    font-size: 100%;
+    text-align: center;
+}
+
+.contenedor_principal{
+    width: 100%;
+    display: flex;
+}
+
+.contenedor_ayudas{
+   width: 65%;
+   margin-left: 5%;
+   margin-right: 5%;
+   text-align: center;
+}
+
+.contenedor_opciones{
+    width: 25%;
+    background-color: transparent;
+    margin-left: 2%;
+}
+
+.contenedor_admin{
+    display:grid;
+ 
+}
+
+.contenedor_usuario{
+    display:grid;
+}
+
+button{
+    background-color: #00bb2d;
+    padding: 6%;
+    margin-top: 2%;
+    font-size: 85%;
+    color: #FFFFFF;
+    font-weight: bolder;
+    text-transform: uppercase;
+    border-color: transparent;
+}
+
+button:hover{
+    background-color: #54c754;
+    cursor: pointer;
+}
+
+.ayudas{
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 1%;
+    display: none;
+}
+
+.psm{
+    text-align: justify;
+    font-size: 130%;
+}
+
+.tsm{
+    font-size: 200%;
+    background-color: rgb(0, 100, 167);
+    color: #FFFFFF;
+}
+
+.ism{
+    width: 80%;
+}
+
+.preguntas{
+    display:block;
+    text-align: left;
+}
+
+a{
+    font-size: 150%;
+}
+

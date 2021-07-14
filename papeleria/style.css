@@ -1,0 +1,321 @@
+body{
+    background-color:  rgb(235, 235, 235);
+    width: 100%;
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+.tabla_federal{
+    background-color: transparent;
+    width: 100%;
+    
+}
+
+.input-group{
+   margin-left: 970px;
+}
+
+.form-control{
+    width: 300px;
+    border-color: transparent;
+}
+h3{
+    width: 100%;
+    background-color: rgb(0, 100, 167);
+    border-color: thistle;
+    color: #FFFFFF;
+    font-size: 15px;
+    padding: 10px;
+}
+
+td{
+    border:solid 10px transparent;
+    border-radius: 4px;
+    background-color: #FFFFFF; 
+    font-size: 13px;
+    
+}  
+
+
+  
+th{
+    background-color: rgb(0, 100, 167);
+    cursor: pointer;
+    color: #FFFFFF;
+    padding: 9.5px;
+}
+
+.contenedor{
+    display: flex;
+    text-align: center;
+}
+
+
+
+.tabla{
+    width: 100%;
+}
+
+th:hover{
+    background-color: rgb(0, 100, 167);
+    cursor: pointer;
+    color: #000000;
+    padding: 9.5px;
+}
+
+a{
+    text-decoration: none;
+    color: #000000;
+    cursor: pointer;
+}
+
+button a{
+    color: #FFFFFF;
+}
+
+.reporte_federal{
+    background-color: transparent;
+    font-size: 12px;
+    padding: 10px;
+    color: #FFFFFF;
+    width: 100%;
+    border-color: #FFFFFF;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.reporte_federal:hover{
+    background-color: #54c754;
+    cursor: pointer;
+}
+
+.Agregar_usuarios{
+    background-color: transparent;
+    font-size: 12px;
+    padding: 10px;
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+    width: 100%;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.Agregar_usuarios:hover{
+    background-color: #54c754;
+    cursor: pointer;
+}
+
+.titulo_federal{
+    background-color: rgb(0, 100, 167);
+    padding: 10px;
+    color: #FFFFFF;
+    font-size: 30px;
+    margin: 20px 400px;
+    text-align: center;
+    text-transform: uppercase;
+    
+}
+
+.eliminar{
+    background-color: red;
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 3px;
+    color: #FFFFFF;
+    border-color: transparent;
+    width: 50%;
+}
+.eliminar a, .editar a{
+    width: 100%;
+}
+.editar{
+    background-color: #ffd700;
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 3px;
+    border-color: transparent;
+    margin-bottom: 3px;
+    width: 50%;
+}
+
+.editar:hover{
+    background-color: #ffff9e;
+    cursor: pointer;
+    color: black;
+}
+
+.eliminar:hover{
+    background-color: #ff7b5a;
+    cursor: pointer;
+    color: black;
+}
+
+.entrada_federal{
+    background-color: transparent;
+    font-size: 12px;
+    padding: 10px;
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+    width: 100%;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+   
+}
+
+.salida_federal{
+    background-color: transparent;
+    font-size: 12px;
+    padding: 10px;
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+    width: 100%;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    
+}
+
+
+.entrada_federal:hover{
+    background-color: #54c754;
+    cursor: pointer;
+}
+
+.salida_federal:hover{
+    background-color: #54c754;
+    cursor: pointer;
+}
+
+/*------Agregar entrada-----*/
+
+.flex{
+    display: flex;
+}
+.flex1{
+    text-align: center;
+}
+
+input:hover{
+    border: 2px solid #93BDED;
+} 
+
+select:hover{
+    border: 2px solid #93BDED;
+}
+
+textarea:hover{
+    border: 2px solid #93BDED;
+}   
+
+
+  input {
+    margin-left: 10px;
+    border: 2px solid #000000;
+	font-size: 12px;
+	height: 40px;
+	width: 70%;
+	padding: 5px 12px;
+	transition: .3s ease all;
+	border-radius: 5px;
+    
+}
+
+
+select{
+    margin: 0px 10px;
+    border: 2px solid #000000;
+	font-size: 14px;
+	height: 40px;
+	width: 70%;
+	padding: 5px 12px;
+	transition: .3s ease all;
+	border-radius: 5px;
+    cursor: pointer;
+}
+
+.agr_entrada{
+    width: 40%;
+    font-size: 12px;
+    border-radius: 5px;
+    background-color: #00bb2d;
+    border-color: transparent;
+    color: #FFFFFF;
+    padding:10px;
+    margin-left: 40px;
+    
+    
+}
+
+.agr_producto{
+    width: 40%;
+    font-size: 12px;
+    border-radius: 5px;
+    background-color:rgb(0, 100, 167);
+    border-color: transparent;
+    color: #FFFFFF;
+    padding:10px;
+    margin-left: 40px;
+}
+
+.agr_producto:hover{
+    background-color: #93BDED;
+    border-color: transparent;
+    cursor: pointer;
+}
+
+.agr_entrada:hover{
+    background-color: #62f257;
+    border-color: transparent;
+    cursor: pointer;
+}
+
+.btn_retiro{
+    width: 40%;
+    font-size: 12px;
+    border-radius: 5px;
+    background-color: red;
+    border-color: transparent;
+    color: #FFFFFF;
+    padding:10px;
+    margin-left: 40px;
+}
+
+.btn_retiro:hover{
+    background-color: #ff7b5a;
+    border-color: transparent;
+    cursor: pointer;
+}
+
+.cantidad{
+    margin: 0px 10px;
+    border: 2px solid #000000;
+	font-size: 14px;
+	height: 30px;
+	width: 15%;
+	padding: 5px 5px;
+	transition: .3s ease all;
+	border-radius: 5px;
+    cursor: pointer;
+}
+
+.producto{
+    margin-left: 10px;
+    border: 2px solid #000000;
+	font-size: 12px;
+	height: 30px;
+	width: 45%;
+	padding: 5px 12px;
+	transition: .3s ease all;
+	border-radius: 5px;
+
+}
+
+
+
+
+
+
+

@@ -1,0 +1,90 @@
+body{
+    background-color:  rgb(235, 235, 235);
+    width: 100%;
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+.contenedor_login{
+    width: 55%;
+    height: 50%;
+    margin: 5% 22%;
+    background-color: #FFFFFF;
+    border-radius: 3%;
+    display: flex;
+    -webkit-box-shadow: 3px 4px 6px rgba(0,0,0,.5);
+    -moz-box-shadow: 3px 4px 6px rgba(0,0,0,.5);
+    box-shadow: 3px 4px 6px rgba(0,0,0,.5);
+}
+
+.contenido_login{
+    padding: 2%;
+    display: inline-block;
+}
+
+.logo_login{
+    padding-left: 10%;
+    width: 70%;
+}
+
+.img_coepris{
+    width: 95%;
+    height: 100%;
+    border-radius: 0% 3% 3% 0%;
+    margin-left: 5%;
+}
+
+.recuperar{
+    font-size: 11px;
+    text-align: center;
+}
+
+
+input{
+    border:none;
+    outline: none;
+    background: none;
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+    font-size: 16px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(109, 93, 93, 0.4);
+    text-align: center;
+    padding-top: 10px   ;
+}
+
+.titulo_login{
+    text-align: center; 
+}
+
+.boton_login{
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-weight: 600;
+    background: #005a87;
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    height: 50%;
+    border-radius: 30px;
+    color: #FFFFFF;
+    font-size: 15px;
+    cursor: pointer;
+    border-color: transparent;
+    margin-top: 30px;
+}
+
+label{
+    padding-top: 30px;
+}
+
+.boton_login:hover{
+    background-color: rgb(151, 201, 60);
+    color: black;
+}
+
+.pie{
+    color: red;
+    background-color: gray;
+}
