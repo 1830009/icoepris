@@ -9,7 +9,7 @@
             print_mensaje('SQL[01] Ha ocurrido un error al\nintentar conectar con la base de datos...','index.php');
             }
             else{
-                $query= 'DELETE FROM recurso_estado WHERE id_estado='.$_GET['x'];
+                $query='UPDATE recurso_estado SET oculto=1 WHERE id_estado='.$_GET['x'];
                 mysqli_query($conexion,$query) or 
                 die(print_mensaje('SQL[01] Ha ocurrido un error al\nintentar conectar con la base de datos...','index.php'));
                 print_mensaje('El elemento ha sido eliminado con exito!','#');
@@ -80,6 +80,7 @@
 
                             if($res->num_rows>0){
                                 while($fila=$res->fetch_assoc()){
+                                    if($fila['oculto']==0){
                                     echo '<tr>';
                                     echo '<td>'.$fila['codigo'].' </td>';
                                     echo '<td>'.$fila['nombre'].' </td>';
@@ -89,6 +90,7 @@
                                     echo '<td>'.$fila['color'].' </td>';
                                     btn_accion($fila['id_estado'],$fila['nombre']);
                                     echo '</tr>';
+                                    }
                                 }
                             }       
                         }

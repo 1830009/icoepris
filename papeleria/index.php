@@ -9,7 +9,9 @@
             print_mensaje('SQL[01] Ha ocurrido un error al\nintentar conectar con la base de datos...','index.php');
             }
             else{
-                $query= 'DELETE FROM papeleria WHERE id_papeleria='.$_GET['x'];
+                //ALTER TABLE papeleria ADD oculto int DEFAULT 0;
+                /*$query= 'DELETE FROM papeleria WHERE id_papeleria='.$_GET['x'];*/
+                $query='UPDATE papeleria SET oculto=1 WHERE id_papeleria='.$_GET['x'];
                 mysqli_query($conexion,$query) or 
                 die(print_mensaje('SQL[01] Ha ocurrido un error al\nintentar conectar con la base de datos...','index.php'));
                 print_mensaje('El elemento ha sido eliminado con exito!','#');
@@ -78,6 +80,8 @@
 
                             if($res->num_rows>0){
                                 while($fila=$res->fetch_assoc()){
+                                    if($fila['oculto']==0){
+
                                     echo '<tr>';
                                     echo '<td>'.$fila['codigo'].' </td>';
                                     echo '<td>'.$fila['nombre'].' </td>';
@@ -87,6 +91,7 @@
                                     echo '<td>'.$fila['color'].' </td>';
                                     btn_accion($fila['id_papeleria'],$fila['nombre']);
                                     echo '</tr>';
+                                    }
                                 }
                             }       
                         }

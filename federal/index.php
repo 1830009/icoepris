@@ -9,7 +9,7 @@
             print_mensaje('SQL[01] Ha ocurrido un error al\nintentar conectar con la base de datos...','index.php');
             }
             else{
-                $query= 'DELETE FROM proyecto_federal WHERE id_federal='.$_GET['x'];
+                $query='UPDATE proyecto_federal SET oculto=1 WHERE id_federal='.$_GET['x'];
                 mysqli_query($conexion,$query) or die('Ha ocurrido un Error al Ejecutar la Consulta');
                 print_mensaje('El elemento ha sido eliminado con exito!','index.php');
         }
@@ -79,6 +79,7 @@
 
                         if($res->num_rows>0){
                             while($fila=$res->fetch_assoc()){
+                                if($fila['oculto']==0){
                                 echo '<tr>';
                                 echo '<td>'.$fila['codigo'].' </td>';
                                 echo '<td>'.$fila['nombre'].' </td>';
@@ -88,6 +89,7 @@
                                 echo '<td>'.$fila['color'].' </td>';
                                 btn_accion($fila['id_federal'],$fila['nombre']);
                                 echo '</tr>';
+                                }
                             }
                         }       
                     }

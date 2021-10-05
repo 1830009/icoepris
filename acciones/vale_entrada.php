@@ -8,7 +8,7 @@ if(isset($_POST['folio'])){
 
     $conexion=ConectarBD();
     if(!$conexion){
-        print_mensaje('SQL[01] Ha ocurrido un error al\nintentar conectar con la base de datos...','index.php');
+        print_mensaje('SQL[98] Ha ocurrido un error al\nintentar conectar con la base de datos...','index.php');
         }
         else{
         $sel=array();
@@ -51,7 +51,7 @@ if(isset($_POST['folio'])){
         "'.$_POST['director'].'","'.$_POST['autorizado'].'","'.$_POST['tipo-in'].'",'.$_POST['sel-guardar'].')';
         $res = mysqli_query($conexion,$query) or
         //die (mysqli_error($conexion)); 
-        die(print_mensaje('SQL[01] Ha ocurrido un error al\nintentar conectar con la base de datos...','index.php'));
+        die(print_mensaje('SQL[99] Ha ocurrido un error al\nintentar conectar con la base de datos...','index.php'));
         $pag='index.php';
             switch($_GET['x']){
                 case 'proyecto_federal': $pag='../federal/';break;
@@ -222,13 +222,15 @@ if(isset($_POST['folio'])){
                                         //errorConexion();
                                         }
                                         else{
-                                            $query= 'SELECT '.$_GET['y'].',nombre,codigo,color,marca FROM '.$_GET['x'];
+                                            $query= 'SELECT '.$_GET['y'].',nombre,codigo,color,marca,oculto FROM '.$_GET['x'];
                                             $res = mysqli_query($conexion,$query) or die('Ha ocurrido un Error al Ejecutar la Consulta');
 
                                             if($res->num_rows>0){
                                                 while($fila=$res->fetch_assoc()){
-                                                    $producto=$fila['codigo'].' '.$fila['nombre'].' '.$fila['marca'].' '.$fila['color'];
-                                                    echo '<option name="'.$fila['nombre'].'" value="'.$fila[$_GET['y']].'">'.$producto.'</option>';
+                                                    if($fila['oculto']==0){
+                                                        $producto=$fila['codigo'].' '.$fila['nombre'].' '.$fila['marca'].' '.$fila['color'];
+                                                        echo '<option name="'.$fila['nombre'].'" value="'.$fila[$_GET['y']].'">'.$producto.'</option>';
+                                                    }
                                                 }
                                             }       
                                         }
@@ -236,11 +238,11 @@ if(isset($_POST['folio'])){
                             </select>
                             
                             &nbsp; <label>C Solicitada:</label>
-                            <input type="number" name="sol-in0" id="sol-inp0" min="1" class="cantidad">   
+                            <input type="number" name="sol-in0" id="sol-inp0" min="1" class="cantidad" required>   
                             <label>C Surtida:</label>
-                            <input type="number" name="sur-in0" id="sur-inp0" min="0" class="cantidad">   
+                            <input type="number" name="sur-in0" id="sur-inp0" min="0" class="cantidad"required>   
                             <label>C Recibida:</label>
-                            <input type="number" name="rec-in0" id="rec-inp0" min="0" class="cantidad">
+                            <input type="number" name="rec-in0" id="rec-inp0" min="0" class="cantidad"required>
                             &nbsp;
                             <input type="text" placeholder="Observación" max="255" name="obs0" id="obs" class="observ">  
                             <br><br>
