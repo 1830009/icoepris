@@ -904,6 +904,55 @@
             
             <div class="ayudas" id="cont_ac">
                 <h1  class="tsm">Almacén de archivos</h1>
+                <br><br>
+                <p class="psm">En el alamacén de archivos encontramos el inventario de los documentos, carpetas y folios que
+                    se ecuentran almacenados en la oficina central de Coepris. Para acceder a ello, tenemos la opción en el 
+                    menú principal, dando clic en el botón de "Almacén de archivos", tambien a través del menu superior dando clic
+                    en la sección de departamentos y desplegara la lista de los posibles departamentos.
+
+                    
+                    <br>
+                    Una vez ingresado, tenemos la pagina principal, en donde en la parte izquierda se encuentra una barra lateral
+                    de opciones que se describen acontinuación:
+                    <br><br>
+                    <b>Ingreso</b>
+                    <p class="psm">Al ingresar a este apartado se abrira un formulario para que el usuario ingrese los datos necesarios
+                        para este tipo de archivo. Principalmente es utilizado para llevar un registro de las cajas que pertenecen a las distinas jurisdicciones
+                        del estado.
+                        <br>
+                        Formulario <br>
+                        En la parte superior encontramos 4 campos que son la información general del archivo, y en la aprte inferior
+                        encontramos un panel de opciones "Checkbox" que son campos seleccionables y corresponden a la jurisdicción y 
+                        el tipo de documento encontrado.
+
+                        <br>
+                        Por ultimo en la parte final, se encuentran dos botones, en donde el boton de agregar caja, es el disparador 
+                        para efectuar el registro del archivo en la base de datos del sitio. Una vez culminado el proceso, el sitio 
+                        notificara al usuario que el proceso se efectuo correctamente; En caso contrario, el sitio notificara el error encontrado.
+                        Sin embargo si el usuario se equivoco de sitio,
+                        tiene la opcion de cancelar el formulario y regresar a la pagina anterior.
+                    </p>
+                    <br><br>
+                    <img class="ism" src="img/Aingreso.PNG" style="width:40%;">
+                    <br><br>
+                    <b>Fondo y Administración</b>
+                    <p class="psm">
+                        En estos dos formularios, los campos a ingresar son similares, sin embargo en el apartado de Administración
+                        se requiere ingresar una cantidad de archivos que se encontraron.
+                        <br><br> El formulario solicita datos base que seran
+                        utiles para la consulta y localización de los archivos almacenados en el inventario. Asi mismo como en el apartado de 
+                        ingreso, contamos con dos botones, en donde el de color verde es el que realiza el proceso de guardado en el sitio, 
+                        y el boton de cancelar para que el usuario tenga la opcion de regresar.
+                    </p>
+                    <br><br>
+                    <img class="ism" src="img/Afondo_.PNG" style="width:60%;">
+                    <br>&nbsp;<br>
+                    <img class="ism" src="img/Aadmin.PNG" style="width:60%;">
+                    <br><br>
+                    
+
+                </p>
+                <br><br>
             </div>
             
             <div class="ayudas" id="cont_ed">
