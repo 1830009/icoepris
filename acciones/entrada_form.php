@@ -33,8 +33,10 @@
 
                                             if($res->num_rows>0){
                                                 while($fila=$res->fetch_assoc()){
+                                                    if($fila['oculto']==0){
                                                     echo '<option name="'.$fila['nombre'].'" value="'.$fila[$id_name].'">'.$fila['nombre'].'</option>';
                                                 }
+                                            }
                                             }       
                                         }
                                 ?>

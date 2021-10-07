@@ -25,12 +25,14 @@
                                     //errorConexion();
                                     }
                                     else{
-                                        $query= 'SELECT '.$id_name.',nombre,color,marca,cantidad FROM '.$tabla;
+                                        $query= 'SELECT '.$id_name.',nombre,color,marca,cantidad,oculto FROM '.$tabla;
                                         $res = mysqli_query($conexion,$query) or die('Ha ocurrido un Error al Ejecutar la Consulta');
 
                                         if($res->num_rows>0){
                                             while($fila=$res->fetch_assoc()){
+                                                if($fila['oculto']==0){
                                             echo '<option id="s'.$fila[$id_name].'" name="'.$fila['cantidad'].'" value="'.$fila[$id_name].'">'.$fila['nombre'].' '.$fila['marca'].' '.$fila['color'].'</option>';
+                                            }
                                             }
                                         }       
                                     }
