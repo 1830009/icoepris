@@ -43,13 +43,6 @@ if($res->num_rows>0){
 $pdf->SetFont('Arial','I',12);
 $pdf->SetFillColor($rgb[0],$rgb[1],$rgb[2]);
 $pdf->SetTextColor(254,254,254);
-$pdf -> Cell(40, 10, 'Código',1, 0, 'C', 1);
-$pdf -> Cell(120, 10, 'Nombre',1, 0, 'C', 1);
-$pdf -> Cell(30, 10, 'Cantidad',1, 1, 'C', 1);
-
-
-$pdf->SetFont('Arial','',12);
-$pdf->SetTextColor(0,0,0);
 
 $productos= $_POST['n-pdf0'];
 foreach($_POST as $var=> $valor){                
@@ -61,6 +54,36 @@ foreach($_POST as $var=> $valor){
         $productos=$productos.','.$valor;
     }
 }
+
+if($_POST['tabla']=="archivo"){
+    $pdf -> Cell(30, 10, 'Fecha',1, 0, 'C', 1);
+    $pdf -> Cell(80, 10, 'Nombre',1, 0, 'C', 1);
+    $pdf -> Cell(40, 10, 'Tipo',1, 0, 'C', 1);    
+    $pdf -> Cell(40, 10, 'Coordinación',1, 1, 'C', 1);    
+    
+    $pdf->SetWidths(Array(30,80,40,40));
+    $pdf->SetFont('Arial','',12);
+    $pdf->SetTextColor(0,0,0);
+    $consulta = "SELECT * FROM ".$_POST['tabla']." WHERE ".$_POST['id_tbl']." IN (".$productos.")";
+    $resultado = $conexion -> query($consulta);
+    foreach($resultado as $item){
+        $pdf->Row(Array(
+            $item['fecha'],
+            $item['nombre'],
+            $item['tipo'],
+            $item['coordinacion']
+        ));
+}
+}else{
+$pdf -> Cell(40, 10, 'Código',1, 0, 'C', 1);
+$pdf -> Cell(120, 10, 'Nombre',1, 0, 'C', 1);
+$pdf -> Cell(30, 10, 'Cantidad',1, 1, 'C', 1);
+
+
+$pdf->SetFont('Arial','',12);
+$pdf->SetTextColor(0,0,0);
+
+
             
 $consulta = "SELECT * FROM ".$_POST['tabla']." WHERE ".$_POST['id_tbl']." IN (".$productos.")";
 
@@ -73,6 +96,7 @@ foreach($resultado as $item){
         $item['nombre'].' '.$item['color'].' '.$item['marca'],
         $item['cantidad'],
     ));
+}
 }
 
 $pdf ->Ln(12);

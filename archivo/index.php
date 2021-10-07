@@ -94,11 +94,11 @@
         $tabla='archivo';
         $id='id_archivo';
         $nombre='Archivo';
-        require '../acciones/entrada_form.php';
+        /*require '../acciones/entrada_form.php';
         formulario_Entrada($tabla,$id,$nombre);
         require '../acciones/salida_form.php';
         formulario_Salida($tabla,$id,$nombre);
-        require '../acciones/pdf_individual.php';
+        */require '../acciones/pdf_individual.php';
         formulario_Pdf($tabla,$id,$nombre);               
     ?>
 

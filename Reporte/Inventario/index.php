@@ -1,4 +1,5 @@
 <?php
+    error_reporting(0);
     require '../../login/sesion.php';
     include('extra.php');
     require '../conexion.php';
@@ -47,13 +48,35 @@
     $pdf->SetFont('Arial','I',14);
     $pdf->SetFillColor($rgb[0],$rgb[1],$rgb[2]);
     $pdf->SetTextColor(254,254,254);
+    
+    if($_GET['x']=="archivo"){
+        $pdf -> Cell(30, 10, 'Fecha',1, 0, 'C', 1);
+        $pdf -> Cell(80, 10, 'Nombre',1, 0, 'C', 1);
+        $pdf -> Cell(40, 10, 'Tipo',1, 0, 'C', 1);    
+        $pdf -> Cell(40, 10, 'Coordinación',1, 1, 'C', 1);    
+        
+        $pdf->SetWidths(Array(30,80,40,40));
+        $pdf->SetFont('Arial','',12);
+        $pdf->SetTextColor(0,0,0);
+        $resultado = $conexion -> query($consulta);
+        foreach($resultado as $item){
+            $pdf->Row(Array(
+                $item['fecha'],
+                $item['nombre'],
+                $item['tipo'],
+                $item['coordinacion']
+            ));
+}
+    }else{
+
     $pdf -> Cell(40, 10, 'Código',1, 0, 'C', 1);
     $pdf -> Cell(120, 10, 'Nombre',1, 0, 'C', 1);
     $pdf -> Cell(30, 10, 'Cantidad',1, 1, 'C', 1);
-
+    
 
     $pdf->SetFont('Arial','',12);
     $pdf->SetTextColor(0,0,0);
+    $resultado = $conexion -> query($consulta);
     foreach($resultado as $item){
         $pdf->Row(Array(
             $item['codigo'],
@@ -62,7 +85,7 @@
         ));
     }
 
-    
+}
     $pdf ->Ln(12);
     $pdf -> Cell(70, 10, 'Elaboró y Entregó', 0, 0, 'C', 0);
     $pdf -> Cell(170, 10, 'Vo. Bo.', 0, 1, 'C', 0);
