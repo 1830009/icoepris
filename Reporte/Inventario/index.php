@@ -7,7 +7,7 @@
         if(!$conexion){
             print_mensaje('SQL[01] Ha ocurrido un error al\nintentar conectar con la base de datos...','index.php');
         }
-    $consulta = "SELECT * FROM ".$_GET['x'];
+    $consulta = "SELECT * FROM ".$_GET['x']." WHERE oculto=0";
     $resultado = $conexion -> query($consulta);
 
 
